@@ -1,0 +1,194 @@
+/* SM-macOS Bright: an opaque Catppuccin surface for reliable Shell contrast. */
+.sm-bright-bottom-status,
+.sm-bright-bottom-status-content,
+.sm-bright-status-item,
+.sm-bright-bottom-status StLabel,
+.sm-bright-bottom-status StIcon,
+.sm-bright-bottom-status-content StLabel,
+.sm-bright-bottom-status-content StIcon,
+.sm-bright-status-item StLabel,
+.sm-bright-status-item StIcon,
+.sm-bright-status-item .system-status-icon,
+.sm-bright-status-item .panel-button {
+    color: #c6d0f5 !important;
+}
+
+.sm-bright-status-item .panel-button:hover,
+.sm-bright-status-item .panel-button:focus,
+.sm-bright-bottom-status StButton:hover,
+.sm-bright-bottom-status StButton:focus {
+    color: #8caaee !important;
+    background-color: #686875 !important;
+}
+
+.sm-bright-status-menu,
+.sm-bright-status-menu .popup-menu-content,
+.sm-bright-status-menu .popup-sub-menu {
+    color: #c6d0f5;
+    background-color: #575763;
+    border-color: #626880;
+}
+
+.sm-bright-status-menu StLabel,
+.sm-bright-status-menu StIcon,
+.sm-bright-status-menu .popup-menu-item {
+    color: #c6d0f5 !important;
+}
+
+.sm-bright-status-menu .popup-menu-item:hover,
+.sm-bright-status-menu .popup-menu-item:focus,
+.sm-bright-status-menu .popup-menu-item:selected {
+    color: #8caaee;
+    background-color: #686875;
+}
+
+.sm-bright-status-menu .popup-menu-item:checked,
+.sm-bright-status-menu .popup-menu-item:active {
+    color: #2f3037;
+    background-color: #8caaee;
+}
+
+.sm-bright-status-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
+    background-color: #626880;
+}
+
+/* GNOME uses several unrelated widget trees for the lower-bar menus. */
+.sm-bright-status-menu.quick-settings,
+.sm-bright-status-menu .quick-settings,
+.sm-bright-status-menu.popup-menu-content,
+.sm-bright-status-menu .popup-menu-content,
+.sm-bright-status-menu .quick-toggle-menu,
+.sm-bright-status-menu .popup-sub-menu,
+.sm-bright-status-menu .calendar,
+.sm-bright-status-menu .message-list,
+.sm-bright-status-menu .message-list-sections {
+    background-color: #575763 !important;
+    color: #c6d0f5 !important;
+    border-color: #626880 !important;
+}
+
+.sm-bright-status-menu .quick-toggle,
+.sm-bright-status-menu .quick-toggle-menu-button,
+.sm-bright-status-menu .button,
+.sm-bright-status-menu .icon-button,
+.sm-bright-status-menu .message,
+.sm-bright-status-menu .events-button,
+.sm-bright-status-menu .world-clocks-button,
+.sm-bright-status-menu .weather-button,
+.sm-bright-status-menu .calendar-day-base {
+    background-color: #686875 !important;
+    color: #c6d0f5 !important;
+}
+
+.sm-bright-status-menu .quick-toggle:hover,
+.sm-bright-status-menu .quick-toggle-menu-button:hover,
+.sm-bright-status-menu .button:hover,
+.sm-bright-status-menu .icon-button:hover,
+.sm-bright-status-menu .calendar-day-base:hover {
+    background-color: #767684 !important;
+    color: #8caaee !important;
+}
+
+.sm-bright-status-menu .quick-toggle:checked,
+.sm-bright-status-menu .quick-toggle-menu-button:checked,
+.sm-bright-status-menu .button:checked,
+.sm-bright-status-menu .calendar-day-base:selected,
+.sm-bright-status-menu .calendar-today {
+    background-color: #8caaee !important;
+    color: #2f3037 !important;
+}
+
+.sm-bright-status-menu .quick-toggle:checked StLabel,
+.sm-bright-status-menu .quick-toggle:checked StIcon,
+.sm-bright-status-menu .quick-toggle-menu-button:checked StLabel,
+.sm-bright-status-menu .quick-toggle-menu-button:checked StIcon,
+.sm-bright-status-menu .button:checked StLabel,
+.sm-bright-status-menu .button:checked StIcon,
+.sm-bright-status-menu .calendar-day-base:selected StLabel,
+.sm-bright-status-menu .calendar-today StLabel {
+    color: #2f3037 !important;
+}
+
+.sm-bright-status-menu .slider {
+    color: #c6d0f5 !important;
+    -barlevel-background-color: #767684;
+    -barlevel-active-background-color: #8caaee;
+}
+
+.sm-bright-status-menu :insensitive,
+.sm-bright-status-menu :insensitive StLabel,
+.sm-bright-status-menu :insensitive StIcon {
+    color: #a5adce !important;
+}
+
+/*
+ * Shell-wide popup material.
+ *
+ * Several GNOME 49 menus (notably IBus/candidate menus and Dash-to-Dock
+ * context menus) live outside the panel actor tree.  Styling them through a
+ * marker class therefore leaves the light Shell theme visible.  This
+ * extension is the common owner of the relocated system controls, so apply
+ * their opaque lower-bar palette directly to every Shell popup surface.
+ */
+.popup-menu,
+.popup-menu-content,
+.candidate-popup-content,
+.popup-sub-menu,
+.quick-toggle-menu {
+    color: #c6d0f5 !important;
+}
+
+.popup-menu-content,
+.candidate-popup-content {
+    background-color: #575763 !important;
+    border-color: #626880 !important;
+    box-shadow: 0 10px 30px rgba(20, 22, 31, 0.46) !important;
+}
+
+.popup-sub-menu,
+.quick-toggle-menu {
+    background-color: #4b4b56 !important;
+    border-color: #626880 !important;
+}
+
+.popup-menu-content StLabel,
+.popup-menu-content StIcon,
+.candidate-popup-content StLabel,
+.candidate-popup-content StIcon,
+.popup-sub-menu StLabel,
+.popup-sub-menu StIcon,
+.quick-toggle-menu StLabel,
+.quick-toggle-menu StIcon,
+.popup-inactive-menu-item,
+.popup-menu-item {
+    color: #c6d0f5 !important;
+}
+
+.popup-menu-item:hover,
+.popup-menu-item:focus,
+.popup-menu-item:selected,
+.popup-menu-item:checked {
+    color: #8caaee !important;
+    background-color: #686875 !important;
+}
+
+.popup-menu-item:active {
+    color: #2f3037 !important;
+    background-color: #8caaee !important;
+}
+
+.popup-menu-item:active StLabel,
+.popup-menu-item:active StIcon {
+    color: #2f3037 !important;
+}
+
+.popup-menu-item:insensitive,
+.popup-menu-item:insensitive StLabel,
+.popup-menu-item:insensitive StIcon {
+    color: #a5adce !important;
+    background-color: transparent !important;
+}
+
+.popup-separator-menu-item .popup-separator-menu-item-separator {
+    background-color: #626880 !important;
+}

@@ -1,0 +1,468 @@
+.codex-workspaces-dock {
+  spacing: 8px;
+  padding: 10px 7px;
+  border-radius: 18px;
+  background-color: rgba(22, 20, 35, 0.50);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+}
+.codex-workspaces-dock-button {
+  padding: 0;
+  border-radius: 13px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background-color: rgba(22, 20, 35, 0.8);
+}
+.codex-workspaces-dock-button:hover {
+  border-color: rgba(201, 174, 255, 0.9);
+}
+.codex-workspaces-dock-button-active {
+  border-color: #bb99ff;
+  box-shadow: 0 0 0 2px rgba(153, 102, 255, 0.72);
+}
+
+/* Shared translucent material and width with the workspace previews. */
+.codex-workspaces-date {
+  padding: 12px 7px;
+}
+.codex-workspaces-date-label {
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+}
+
+.codex-workspace-drop-target {
+  border-color: #decaff;
+  box-shadow: 0 0 0 3px rgba(185, 145, 240, 0.85);
+  background-color: rgba(99, 65, 137, 0.65);
+}
+
+/* Match the application dock to the Colloid purple desktop. */
+#dashtodockContainer.bottom .dash-background {
+  border-color: rgba(190, 164, 224, 0.35);
+}
+
+/* Match the relocated system/logout menu to the existing violet dock. */
+.sm-theme-dark-purple .popup-menu .popup-menu-content.quick-settings,
+.sm-theme-dark-purple .quick-settings {
+  background-color: rgba(22, 20, 35, 0.96) !important;
+  color: #f2edf8;
+  border: 1px solid rgba(190, 164, 224, 0.35);
+}
+.sm-theme-dark-purple .quick-settings .quick-toggle,
+.sm-theme-dark-purple .quick-settings .quick-toggle-menu-button,
+.sm-theme-dark-purple .quick-settings .icon-button,
+.sm-theme-dark-purple .quick-settings .button {
+  background-color: rgba(190, 164, 224, 0.12) !important;
+  color: #f2edf8;
+}
+.sm-theme-dark-purple .quick-settings .quick-toggle:hover,
+.sm-theme-dark-purple .quick-settings .quick-toggle-menu-button:hover,
+.sm-theme-dark-purple .quick-settings .icon-button:hover,
+.sm-theme-dark-purple .quick-settings .button:hover {
+  background-color: rgba(190, 164, 224, 0.24) !important;
+}
+.sm-theme-dark-purple .quick-settings .quick-toggle:checked,
+.sm-theme-dark-purple .quick-settings .quick-toggle-menu-button:checked,
+.sm-theme-dark-purple .quick-settings .button:checked {
+  background-color: #bb99ff !important;
+  color: #161423 !important;
+}
+.sm-theme-dark-purple .quick-settings .quick-toggle:checked:hover,
+.sm-theme-dark-purple .quick-settings .quick-toggle-menu-button:checked:hover,
+.sm-theme-dark-purple .quick-settings .button:checked:hover {
+  background-color: #c9aeff !important;
+  color: #161423 !important;
+}
+.sm-theme-dark-purple .quick-settings .slider {
+  color: #f2edf8;
+  -barlevel-background-color: rgba(190, 164, 224, 0.22);
+  -barlevel-active-background-color: #bb99ff;
+}
+.sm-theme-dark-purple .quick-settings .quick-toggle-menu {
+  background-color: #241f32 !important;
+  color: #f2edf8;
+}
+.sm-theme-dark-purple .quick-settings .popup-menu-item:active,
+.sm-theme-dark-purple .quick-settings .popup-menu-item:selected {
+  background-color: rgba(187, 153, 255, 0.25) !important;
+  color: #f2edf8;
+}
+
+/* SM-macOS palette. Geometry remains shared with SM-Dark Purple. */
+.sm-theme-macos .codex-workspaces-dock {
+  background-color: rgba(20, 24, 42, 0.62);
+  border-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 12px 38px rgba(0, 0, 0, 0.42);
+}
+.sm-theme-macos .codex-workspaces-dock-button {
+  background-color: rgba(27, 32, 55, 0.78);
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.sm-theme-macos .codex-workspaces-dock-button:hover {
+  border-color: rgba(100, 210, 255, 0.95);
+}
+.sm-theme-macos .codex-workspaces-dock-button-active {
+  border-color: #0a84ff;
+  box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.72);
+}
+.sm-theme-macos .codex-workspaces-date-label {
+  color: #f5f5f7;
+}
+.sm-theme-macos .codex-workspace-drop-target {
+  border-color: #64d2ff;
+  box-shadow: 0 0 0 3px rgba(100, 210, 255, 0.8);
+  background-color: rgba(10, 132, 255, 0.48);
+}
+.sm-theme-macos #dashtodockContainer.bottom .dash-background {
+  border-color: rgba(255, 255, 255, 0.26);
+}
+.sm-theme-macos .popup-menu .popup-menu-content.quick-settings,
+.sm-theme-macos .quick-settings {
+  background-color: rgba(24, 27, 46, 0.94) !important;
+  color: #f5f5f7;
+  border-color: rgba(255, 255, 255, 0.24);
+}
+.sm-theme-macos .quick-settings .quick-toggle,
+.sm-theme-macos .quick-settings .quick-toggle-menu-button,
+.sm-theme-macos .quick-settings .icon-button,
+.sm-theme-macos .quick-settings .button {
+  background-color: rgba(255, 255, 255, 0.11) !important;
+  color: #f5f5f7;
+}
+.sm-theme-macos .quick-settings .quick-toggle:hover,
+.sm-theme-macos .quick-settings .quick-toggle-menu-button:hover,
+.sm-theme-macos .quick-settings .icon-button:hover,
+.sm-theme-macos .quick-settings .button:hover {
+  background-color: rgba(100, 210, 255, 0.20) !important;
+}
+.sm-theme-macos .quick-settings .quick-toggle:checked,
+.sm-theme-macos .quick-settings .quick-toggle-menu-button:checked,
+.sm-theme-macos .quick-settings .button:checked {
+  background-color: #0a84ff !important;
+  color: #ffffff !important;
+}
+.sm-theme-macos .quick-settings .quick-toggle:checked:hover,
+.sm-theme-macos .quick-settings .quick-toggle-menu-button:checked:hover,
+.sm-theme-macos .quick-settings .button:checked:hover {
+  background-color: #409cff !important;
+  color: #ffffff !important;
+}
+.sm-theme-macos .quick-settings .slider {
+  color: #f5f5f7;
+  -barlevel-background-color: rgba(255, 255, 255, 0.20);
+  -barlevel-active-background-color: #0a84ff;
+}
+.sm-theme-macos .quick-settings .quick-toggle-menu {
+  background-color: #20243d !important;
+  color: #f5f5f7;
+}
+.sm-theme-macos .quick-settings .popup-menu-item:active,
+.sm-theme-macos .quick-settings .popup-menu-item:selected {
+  background-color: rgba(10, 132, 255, 0.24) !important;
+  color: #f5f5f7;
+}
+
+/* SM-macOS Bright: the same layout and accents with frosted light materials. */
+.sm-theme-macos-bright .codex-workspaces-dock {
+  background-color: rgba(22, 20, 35, 0.50);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+}
+.codex-workspaces-dock.sm-theme-macos-bright {
+  background-color: rgba(22, 20, 35, 0.50);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.35);
+}
+.sm-theme-macos-bright .codex-workspaces-dock-button {
+  background-color: rgba(22, 20, 35, 0.80);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+.sm-theme-macos-bright .codex-workspaces-dock-button:hover {
+  border-color: rgba(100, 210, 255, 0.95);
+}
+.sm-theme-macos-bright .codex-workspaces-dock-button-active {
+  border-color: #0a84ff;
+  box-shadow: 0 0 0 2px rgba(10, 132, 255, 0.72);
+}
+.sm-theme-macos-bright .codex-workspaces-date-label {
+  color: #c6d0f5;
+}
+
+/* The pale wallpaper needs an explicit high-contrast top panel. */
+.sm-theme-macos-bright #panel {
+  background-color: #ffffff !important;
+  color: #0b0f17 !important;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.32);
+  box-shadow: 0 4px 18px rgba(46, 55, 78, 0.18);
+}
+.sm-theme-macos-bright #panel .panel-button,
+.sm-theme-macos-bright #panel .panel-button StLabel,
+.sm-theme-macos-bright #panel .panel-button StIcon,
+.sm-theme-macos-bright #panel .panel-button .system-status-icon,
+.sm-theme-macos-bright #panel .panel-status-indicators-box,
+.sm-theme-macos-bright #panel .clock,
+.sm-theme-macos-bright #panel .clock-display,
+.sm-theme-macos-bright #panel StLabel,
+.sm-theme-macos-bright #panel StIcon {
+  color: #0b0f17 !important;
+}
+.sm-theme-macos-bright #panel .panel-button:hover,
+.sm-theme-macos-bright #panel .panel-button:focus {
+  background-color: rgba(10, 132, 255, 0.16) !important;
+  color: #004f9e !important;
+}
+.sm-theme-macos-bright #panel .panel-button:active,
+.sm-theme-macos-bright #panel .panel-button:checked,
+.sm-theme-macos-bright #panel .panel-button:overview,
+.sm-theme-macos-bright #panel .panel-button:focus:checked {
+  background-color: rgba(10, 132, 255, 0.24) !important;
+  color: #003f80 !important;
+}
+.sm-theme-macos-bright #panel .panel-button:hover StLabel,
+.sm-theme-macos-bright #panel .panel-button:hover StIcon,
+.sm-theme-macos-bright #panel .panel-button:focus StLabel,
+.sm-theme-macos-bright #panel .panel-button:focus StIcon,
+.sm-theme-macos-bright #panel .panel-button:checked StLabel,
+.sm-theme-macos-bright #panel .panel-button:checked StIcon {
+  color: #003f80 !important;
+}
+
+/* Direct panel class: avoids theme ancestry differences between GNOME builds. */
+#panel.sm-macos-bright-panel,
+.sm-macos-bright-panel {
+  background-color: #dce0e8 !important;
+  color: #4c4f69 !important;
+  border-bottom: 1px solid #9ca0b0;
+  box-shadow: 0 4px 18px rgba(76, 79, 105, 0.20);
+}
+#panel.sm-macos-bright-panel .panel-button,
+#panel.sm-macos-bright-panel .panel-button StLabel,
+#panel.sm-macos-bright-panel .panel-button StIcon,
+#panel.sm-macos-bright-panel .panel-button .system-status-icon,
+#panel.sm-macos-bright-panel .panel-status-indicators-box,
+#panel.sm-macos-bright-panel .clock,
+#panel.sm-macos-bright-panel .clock-display,
+#panel.sm-macos-bright-panel StLabel,
+#panel.sm-macos-bright-panel StIcon {
+  color: #4c4f69 !important;
+}
+#panel.sm-macos-bright-panel *,
+.sm-macos-bright-panel * {
+  color: #4c4f69 !important;
+}
+/* Catppuccin Latte for menus opened from the relocated bottom panel. */
+.sm-macos-bright-panel-menu {
+  background-color: #575763 !important;
+  color: #c6d0f5 !important;
+  border: 1px solid #626880;
+  box-shadow: 0 10px 30px rgba(20, 22, 31, 0.46);
+}
+.sm-macos-bright-panel-menu StLabel,
+.sm-macos-bright-panel-menu StIcon,
+.sm-macos-bright-panel-menu .popup-menu-item,
+.sm-macos-bright-panel-menu .quick-toggle,
+.sm-macos-bright-panel-menu .quick-toggle-menu-button,
+.sm-macos-bright-panel-menu .button,
+.sm-macos-bright-panel-menu .icon-button {
+  color: #c6d0f5 !important;
+}
+.sm-macos-bright-panel-menu .popup-menu-item:hover,
+.sm-macos-bright-panel-menu .popup-menu-item:focus,
+.sm-macos-bright-panel-menu .popup-menu-item:selected,
+.sm-macos-bright-panel-menu .quick-toggle:hover,
+.sm-macos-bright-panel-menu .quick-toggle-menu-button:hover,
+.sm-macos-bright-panel-menu .button:hover,
+.sm-macos-bright-panel-menu .icon-button:hover {
+  background-color: #686875 !important;
+  color: #8caaee !important;
+}
+.sm-macos-bright-panel-menu .quick-toggle:checked,
+.sm-macos-bright-panel-menu .quick-toggle-menu-button:checked,
+.sm-macos-bright-panel-menu .button:checked {
+  background-color: #8caaee !important;
+  color: #2f3037 !important;
+}
+.sm-macos-bright-panel-menu .quick-toggle:checked StLabel,
+.sm-macos-bright-panel-menu .quick-toggle:checked StIcon,
+.sm-macos-bright-panel-menu .quick-toggle-menu-button:checked StLabel,
+.sm-macos-bright-panel-menu .quick-toggle-menu-button:checked StIcon,
+.sm-macos-bright-panel-menu .button:checked StLabel,
+.sm-macos-bright-panel-menu .button:checked StIcon {
+  color: #2f3037 !important;
+}
+.sm-macos-bright-panel-menu .quick-toggle-menu,
+.sm-macos-bright-panel-menu .popup-menu-content {
+  background-color: #4b4b56 !important;
+  color: #c6d0f5 !important;
+}
+.sm-macos-bright-panel-menu .slider {
+  color: #c6d0f5;
+  -barlevel-background-color: #767684;
+  -barlevel-active-background-color: #8caaee;
+}
+
+/* Opaque shell popup menus in the Bright profile, including dock right-click menus. */
+.sm-theme-macos-bright .popup-menu-content,
+.sm-theme-macos-bright .popup-sub-menu {
+  background-color: #575763 !important;
+  color: #c6d0f5 !important;
+  border-color: #626880;
+  box-shadow: 0 10px 30px rgba(20, 22, 31, 0.46);
+}
+.sm-theme-macos-bright .popup-menu-content StLabel,
+.sm-theme-macos-bright .popup-menu-content StIcon,
+.sm-theme-macos-bright .popup-menu-item,
+.sm-theme-macos-bright .popup-menu-item StLabel,
+.sm-theme-macos-bright .popup-menu-item StIcon {
+  color: #c6d0f5 !important;
+}
+.sm-theme-macos-bright .popup-menu-item:hover,
+.sm-theme-macos-bright .popup-menu-item:focus,
+.sm-theme-macos-bright .popup-menu-item:selected {
+  background-color: #686875 !important;
+  color: #8caaee !important;
+}
+.sm-theme-macos-bright .popup-menu-item:checked,
+.sm-theme-macos-bright .popup-menu-item:active {
+  background-color: #8caaee !important;
+  color: #2f3037 !important;
+}
+.sm-theme-macos-bright .popup-menu-item:checked StLabel,
+.sm-theme-macos-bright .popup-menu-item:checked StIcon,
+.sm-theme-macos-bright .popup-menu-item:active StLabel,
+.sm-theme-macos-bright .popup-menu-item:active StIcon {
+  color: #2f3037 !important;
+}
+.sm-theme-macos-bright .popup-separator-menu-item .popup-separator-menu-item-separator {
+  background-color: #626880;
+}
+#panel.sm-macos-bright-panel .panel-button:hover,
+#panel.sm-macos-bright-panel .panel-button:focus {
+  background-color: rgba(30, 102, 245, 0.15) !important;
+  color: #1e66f5 !important;
+}
+#panel.sm-macos-bright-panel .panel-button:active,
+#panel.sm-macos-bright-panel .panel-button:checked,
+#panel.sm-macos-bright-panel .panel-button:overview,
+#panel.sm-macos-bright-panel .panel-button:focus:checked {
+  background-color: rgba(30, 102, 245, 0.23) !important;
+  color: #1e66f5 !important;
+}
+.sm-theme-macos-bright .codex-workspace-drop-target {
+  border-color: #64d2ff;
+  box-shadow: 0 0 0 3px rgba(100, 210, 255, 0.8);
+  background-color: rgba(10, 132, 255, 0.52);
+}
+.sm-theme-macos-bright #dashtodockContainer.bottom .dash-background {
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.sm-theme-macos-bright .popup-menu .popup-menu-content.quick-settings,
+.sm-theme-macos-bright .quick-settings {
+  background-color: #575763 !important;
+  color: #c6d0f5 !important;
+  border-color: #626880;
+}
+.sm-theme-macos-bright .quick-settings .quick-toggle,
+.sm-theme-macos-bright .quick-settings .quick-toggle-menu-button,
+.sm-theme-macos-bright .quick-settings .icon-button,
+.sm-theme-macos-bright .quick-settings .button {
+  background-color: #686875 !important;
+  color: #c6d0f5 !important;
+}
+.sm-theme-macos-bright .quick-settings .quick-toggle:hover,
+.sm-theme-macos-bright .quick-settings .quick-toggle-menu-button:hover,
+.sm-theme-macos-bright .quick-settings .icon-button:hover,
+.sm-theme-macos-bright .quick-settings .button:hover {
+  background-color: #767684 !important;
+}
+.sm-theme-macos-bright .quick-settings .quick-toggle:checked,
+.sm-theme-macos-bright .quick-settings .quick-toggle-menu-button:checked,
+.sm-theme-macos-bright .quick-settings .button:checked {
+  background-color: #8caaee !important;
+  color: #2f3037 !important;
+}
+.sm-theme-macos-bright .quick-settings .quick-toggle:checked:hover,
+.sm-theme-macos-bright .quick-settings .quick-toggle-menu-button:checked:hover,
+.sm-theme-macos-bright .quick-settings .button:checked:hover {
+  background-color: #99d1db !important;
+  color: #2f3037 !important;
+}
+.sm-theme-macos-bright .quick-settings .slider {
+  color: #c6d0f5;
+  -barlevel-background-color: #767684;
+  -barlevel-active-background-color: #8caaee;
+}
+.sm-theme-macos-bright .quick-settings .quick-toggle-menu {
+  background-color: #4b4b56 !important;
+  color: #c6d0f5 !important;
+}
+.sm-theme-macos-bright .quick-settings .popup-menu-item:active,
+.sm-theme-macos-bright .quick-settings .popup-menu-item:selected {
+  background-color: #686875 !important;
+  color: #8caaee !important;
+}
+
+/*
+ * Notification banners use the same opaque Catppuccin material as menus
+ * opened from the relocated bottom bar.  WhiteSur's translucent light banner
+ * is difficult to read over bright windows, especially for multiline text.
+ */
+.sm-theme-macos-bright .notification-banner,
+.sm-theme-macos-bright .notification-banner.message {
+  background-color: #575763 !important;
+  color: #c6d0f5 !important;
+  border-color: #626880 !important;
+  box-shadow: 0 10px 30px rgba(20, 22, 31, 0.46) !important;
+  text-shadow: none !important;
+}
+.sm-theme-macos-bright .notification-banner .message,
+.sm-theme-macos-bright .notification-banner.message:second-in-stack,
+.sm-theme-macos-bright .notification-banner.message:lower-in-stack {
+  background-color: transparent !important;
+  color: #c6d0f5 !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.sm-theme-macos-bright .notification-banner StLabel,
+.sm-theme-macos-bright .notification-banner StIcon,
+.sm-theme-macos-bright .notification-banner .message-title,
+.sm-theme-macos-bright .notification-banner .message-body,
+.sm-theme-macos-bright .notification-banner .message-source-title {
+  color: #c6d0f5 !important;
+}
+.sm-theme-macos-bright .notification-banner .message-header,
+.sm-theme-macos-bright .notification-banner .event-time {
+  color: #a5adce !important;
+}
+.sm-theme-macos-bright .notification-banner .message-themed-icon,
+.sm-theme-macos-bright .notification-banner .message-expand-button,
+.sm-theme-macos-bright .notification-banner .message-close-button,
+.sm-theme-macos-bright .notification-banner .notification-button {
+  background-color: #686875 !important;
+  color: #c6d0f5 !important;
+  border-color: transparent !important;
+}
+.sm-theme-macos-bright .notification-banner .message-expand-button:hover,
+.sm-theme-macos-bright .notification-banner .message-close-button:hover,
+.sm-theme-macos-bright .notification-banner .notification-button:hover,
+.sm-theme-macos-bright .notification-banner .notification-button:focus {
+  background-color: #767684 !important;
+  color: #8caaee !important;
+}
+.sm-theme-macos-bright .notification-banner .message-expand-button:active,
+.sm-theme-macos-bright .notification-banner .message-close-button:active,
+.sm-theme-macos-bright .notification-banner .notification-button:active,
+.sm-theme-macos-bright .notification-banner .notification-button:checked {
+  background-color: #8caaee !important;
+  color: #2f3037 !important;
+}
+.sm-theme-macos-bright .notification-banner .message-expand-button:active StIcon,
+.sm-theme-macos-bright .notification-banner .message-close-button:active StIcon,
+.sm-theme-macos-bright .notification-banner .notification-button:active StLabel,
+.sm-theme-macos-bright .notification-banner .notification-button:checked StLabel {
+  color: #2f3037 !important;
+}
+.sm-theme-macos-bright .notification-banner .url-highlighter {
+  link-color: #8caaee;
+}

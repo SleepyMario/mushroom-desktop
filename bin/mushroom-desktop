@@ -1,0 +1,22 @@
+#!/usr/bin/env python3
+"""Explicit desktop activation; package installation itself never changes settings."""
+import argparse,os,subprocess,sys
+from pathlib import Path
+UUIDS=('workspaces-to-dock-codex@local','right-half-panel@local')
+parser=argparse.ArgumentParser(description='Inspect or explicitly enable the Mushroom desktop extensions')
+parser.add_argument('action',choices=['status','enable','disable'],nargs='?',default='status')
+args=parser.parse_args()
+local=Path(os.environ.get('XDG_DATA_HOME',str(Path.home()/'.local/share')))/'gnome-shell/extensions'
+shadowed=[uuid for uuid in UUIDS if (local/uuid).exists()]
+if args.action=='status':
+ for uuid in UUIDS:
+  print(f'{uuid}: '+('existing local copy takes precedence; left intact' if uuid in shadowed else 'uses system package when installed'))
+ result=subprocess.run(['gnome-extensions','list','--enabled'],capture_output=True,text=True)
+ if result.returncode==0:print('Enabled extensions:\n'+result.stdout.strip())
+ else:print('No accessible GNOME session; installed files can be used after login.')
+ sys.exit(0)
+if args.action=='enable' and shadowed:
+ parser.exit(1,'Existing local extension copies take precedence. No files or settings changed.\nSee the migration instructions before switching to packaged copies.\n')
+for uuid in UUIDS:
+ result=subprocess.run(['gnome-extensions',args.action,uuid])
+ if result.returncode:sys.exit(result.returncode)

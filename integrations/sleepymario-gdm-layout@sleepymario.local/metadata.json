@@ -1,0 +1,11 @@
+{
+  "uuid": "sleepymario-gdm-layout@sleepymario.local",
+  "name": "SleepyMario GDM Layout",
+  "description": "Keeps the GDM accessibility and session controls in the validated left-side order.",
+  "shell-version": [
+    "49"
+  ],
+  "session-modes": [
+    "gdm-night-elf"
+  ]
+}

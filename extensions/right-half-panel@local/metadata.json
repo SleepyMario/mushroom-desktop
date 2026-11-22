@@ -1,0 +1,13 @@
+{
+  "uuid": "right-half-panel@local",
+  "name": "Bottom Left Status Panel",
+  "description": "Move GNOME right-side status indicators into a bottom-left block and remove the top panel.",
+  "shell-version": [
+    "46",
+    "49",
+    "50"
+  ],
+  "version": 1,
+  "url": "https://github.com/SleepyMario/mushroom-desktop",
+  "version-name": "0.1.0-alpha.1"
+}

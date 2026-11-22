@@ -1,0 +1,13 @@
+{
+  "uuid": "workspaces-to-dock-codex@local",
+  "name": "Workspaces to Dock (Codex)",
+  "description": "Mushroom workspace previews, system monitoring and window layout controls for GNOME 46, 49 and 50.",
+  "shell-version": [
+    "46",
+    "49",
+    "50"
+  ],
+  "version": 1,
+  "url": "https://github.com/SleepyMario/mushroom-desktop",
+  "version-name": "0.1.0-alpha.1"
+}

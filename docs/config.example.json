@@ -1,0 +1,9 @@
+{
+  "platformStatusUrl": "",
+  "platformLinks": {
+    "twitch": "https://www.twitch.tv/",
+    "kick": "https://kick.com/",
+    "youtube": "https://www.youtube.com/"
+  },
+  "nfsPath": "/var/nfs"
+}
