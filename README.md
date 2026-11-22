@@ -4,6 +4,10 @@ Mushroom Desktop is the sixth Mushroom project: a custom GNOME workspace sidebar
 
 Supported targets are Ubuntu **24.04 LTS (GNOME 46)**, Ubuntu **26.04 LTS (GNOME 50)**, and Gentoo with GNOME **46, 49 or 50**. Older Ubuntu releases, other desktops and Docker distribution are out of scope. Containers under `tests/` are disposable compatibility-test environments only; no Docker image is published or scheduled.
 
+## Maintenance policy
+
+Follow upstream GNOME releases and maintain a small extension layer, not a GNOME fork. Keep compatibility changes focused and test activation, window operations and disable/re-enable against supported GNOME releases. Ubuntu support remains limited to 24.04 and 26.04 LTS; Gentoo follows the supported GNOME versions. Internal Shell API use can require adjustments for new GNOME releases.
+
 ## Components
 
 - `workspaces-to-dock-codex@local`: workspace previews, system/GPU monitoring, layout selector, window spacing and snapping helpers.
